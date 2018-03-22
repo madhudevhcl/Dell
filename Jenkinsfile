@@ -5,7 +5,7 @@ pipeline {
         stage('Build') { 
             steps {
               
-	    bat 'mvn verify'
+	    sh 'mvn verify'
             }
         }
         stage('Test') { 
