@@ -4,7 +4,8 @@ pipeline {
 	
         stage('Build') { 
             steps {
-               echo "build success" 
+              withmaven (maven:Maven)
+		    bat 'mvn verify'
             }
         }
         stage('Test') { 
