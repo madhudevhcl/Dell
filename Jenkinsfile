@@ -5,7 +5,7 @@ pipeline {
         stage('Build') { 
             steps {
               withMaven(maven : 'Maven')
-		    bat 'mvn verify'
+		    bat 'mvn compile'
             }
         }
         stage('Test') { 
