@@ -4,8 +4,8 @@ pipeline {
 	
         stage('Build') { 
             steps {
-              
-	   echo "build succes"
+              withMaven(maven : 'Maven-3.5.3')
+		    bat 'mvn clean'
             }
         }
         stage('Test') { 
