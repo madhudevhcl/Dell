@@ -12,7 +12,7 @@ pipeline {
 		   
             //  withMaven(maven : 'Maven-3.5.3')
 		    
-		    bat 'mvn compile'
+		    bat 'mvn clean compile'
             }
         }
         stage('Test') { 
