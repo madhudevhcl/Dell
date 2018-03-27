@@ -12,7 +12,7 @@ pipeline {
 		   
             //  withMaven(maven : 'Maven-3.5.3')
 		    
-		    bat 'mvn clean compile'
+		    bat 'mvn compile'
             }
         }
         stage('Test') { 
@@ -22,7 +22,7 @@ pipeline {
         }
         stage('package') { 
             steps {
-                mvn 'package' 
+               bat 'mvn package' 
             }
         }
     }
