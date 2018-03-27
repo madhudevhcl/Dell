@@ -17,12 +17,12 @@ pipeline {
         }
         stage('Test') { 
             steps {
-               echo " Test success" 
+               bat 'mvn test'
             }
         }
-        stage('Deploy') { 
+        stage('package') { 
             steps {
-                echo " Deploy success" 
+                mvn 'package' 
             }
         }
     }
