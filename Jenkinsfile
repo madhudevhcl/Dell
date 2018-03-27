@@ -1,5 +1,8 @@
 pipeline {
     agent any 
+	tools {
+		maven 'Maven-3.5.3'
+	}
     stages {
 	
 	    
@@ -9,7 +12,7 @@ pipeline {
 		   
             //  withMaven(maven : 'Maven-3.5.3')
 		    
-		    bat 'mvn.cmd compile'
+		    bat 'mvn compile'
             }
         }
         stage('Test') { 
