@@ -10,9 +10,10 @@ pipeline {
             steps {
 		    
 		   
-            withMaven(maven :'Maven-3.5.3')
+		    withMaven(maven : 'Maven-3.5.3') {
 		    
 		    bat 'mvn compile'
+		    }
             }
         }
         stage('Test') { 
