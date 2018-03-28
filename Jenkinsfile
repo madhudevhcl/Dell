@@ -1,8 +1,8 @@
 pipeline {
     agent any 
-	tools {
-		maven 'Maven-3.5.3'
-	}
+	//tools {
+		//maven 'Maven-3.5.3'
+	//}
     stages {
 	
 	    
@@ -10,7 +10,7 @@ pipeline {
             steps {
 		    
 		   
-            //  withMaven(maven : 'Maven-3.5.3')
+            withmaven(maven :'Maven-3.5.3')
 		    
 		    bat 'mvn compile'
             }
